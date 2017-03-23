@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<VBox id="vBox" fx:id="vbox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1280.0" stylesheets="@../css/mainScreenMediaDetails.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane VBox.vgrow="ALWAYS">
+         <children>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="80.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" />
+                  <VBox id="mediaImage" fx:id="vBoxImageView1" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                     <children>
+                        <ImageView id="imageView" fx:id="imageView" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="60.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox id="mediaInfo" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label id="title" fx:id="title" text="Title" wrapText="true" />
+                        <HBox id="movieData" fillHeight="false" spacing="10.0">
+                           <children>
+                              <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label id="movieYear" fx:id="movieYear" text="1999" />
+                                    <Label id="movieContentRating" fx:id="movieContentRating" text="M" />
+                                    <Label id="movieDuration" fx:id="movieDuration" text="1h 30m" />
+                                 </children>
+                              </HBox>
+                              <HBox id="statusHBox" alignment="TOP_RIGHT" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <ImageView fx:id="statusImage" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/check.svg.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="statusText" contentDisplay="RIGHT" text="AVAILABLE" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <Label id="plot" fx:id="plot" text="Plot" wrapText="true" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </StackPane>
+   </children>
+</VBox>
