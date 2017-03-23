@@ -197,13 +197,6 @@ public class MainScreen extends StackPane implements AppScreen {
                 movieDetailsListView.scrollTo(t1.intValue());
             }
         });
-        //Hack to fix a visual glitch at the start that doesn't show all posters
-        for (int i=0; i<moviesPostersList.getItems().size(); i++) {
-            moviesPostersList.getSelectionModel().select(i);
-//            moviesPostersList.getFocusModel().focus(i);
-            moviesPostersList.scrollTo(i);
-        }
-        moviesPostersList.scrollTo(0);
     }
 
 
