@@ -1,0 +1,91 @@
+#gridpane, #gridpane * {
+	/*-fx-background-color: black;*/
+
+}
+#titleLabel {
+    -fx-font-family: "Arial";
+    -fx-font-size: 34px;
+    -fx-font-weight: bolder;
+    -fx-text-fill: white;
+}
+
+#gridpane,
+#moviesPostersList,
+#moviesDetailsList,
+#moviesPostersList .cell
+{
+   -fx-background-color: black;
+}
+
+#gridpane {
+    -fx-border-color: black;
+    -fx-border-style: solid line-cap round;
+    -fx-border-width: 30;
+}
+
+#border-shadow {
+    -fx-background-color: rgba(255,255,255,0.01);
+    /*-fx-effect: innershadow( gaussian, white, 50,1, 0, 0 );*/
+    /*-fx-effect: innershadow( gaussian, red, 10,1, 0, 0 );*/
+    -fx-border-color:
+            /*linear-gradient(to bottom, black, transparent),*/
+            linear-gradient(to left, black 60%, transparent 100%),
+            /*linear-gradient(to top, black, transparent),*/
+            linear-gradient(to right, black 60%, transparent 100%);
+    -fx-border-style: solid;
+    -fx-border-width:
+            /*200 0 0 0,*/
+            0 50 0 0,
+            /*0 0 200 0,*/
+            0 0 0 50;
+}
+
+#moviesPostersList {
+    /*-fx-padding: 30 30 0 30;*/
+    /*-fx-effect: innershadow( gaussian, black, 60,0.8, 1, 0 );*/
+            /*0 0 0 30,*/
+            /*0 30 0 0;*/
+}
+
+#moviesPostersList .list-cell{
+}
+
+#moviesPostersList .list-cell:selected {
+    /*-fx-effect: innershadow( gaussian, white, 25, 0.05, 0, 0 );*/
+    -fx-effect: innershadow( gaussian, white, 3,1, 0, 0 );
+}
+
+#moviesPostersList .list-cell:selected .cell {
+}
+/* Removing Scrollbars */
+#movieDetailsList .scroll-bar .increment-arrow,
+#movieDetailsList .scroll-bar .decrement-arrow,
+#movieDetailsList .scroll-bar .increment-button,
+#movieDetailsList .scroll-bar .decrement-button,
+#moviesPostersList .scroll-bar .increment-arrow,
+#moviesPostersList .scroll-bar .decrement-arrow,
+#moviesPostersList .scroll-bar .increment-button,
+#moviesPostersList .scroll-bar .decrement-button,
+#movieDetailsList,
+#movieDetailsList .list-cell,
+#moviesPostersList .list-cell
+{
+    -fx-padding:0;
+}
+
+#moviesPostersList .list-cell
+{
+    /*-fx-padding: 30;*/
+    /*-fx-cell-size: 50%;*/
+    -fx-effect: innershadow( gaussian, black, 20,0.8, 0, 0 );
+}
+
+#moviesPostersList .list-cell:selected
+{
+    /*-fx-padding: 0;*/
+    /*-fx-cell-size: 100%;*/
+}
+    /*-fx-cell-size: 500;*/
+#movieDetailsList {
+
+}

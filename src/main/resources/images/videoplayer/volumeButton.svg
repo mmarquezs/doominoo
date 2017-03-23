@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+        width="32px"
+        height="32px"
+        viewBox="0 0 32 32"
+        version="1.1"
+        id="SVGRoot"
+        inkscape:version="0.92.1 r"
+        sodipodi:docname="volumeButton.svg">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="8"
+     inkscape:cx="50.548227"
+     inkscape:cy="4.9202649"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1894"
+     inkscape:window-height="1037"
+     inkscape:window-x="13"
+     inkscape:window-y="30"
+     inkscape:window-maximized="0"
+     inkscape:grid-bbox="true"
+     showguides="true"
+     inkscape:measure-start="21,15"
+     inkscape:measure-end="29,15">
+    <inkscape:grid
+       type="xygrid"
+       id="grid866" />
+  </sodipodi:namedview>
+  <defs
+     id="defs18" />
+  <metadata
+     id="metadata21">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Capa 1">
+    <path
+       style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.55379725px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="m 16,0.7421875 c -3.994325,0 -7.9646482,1.6443357 -10.7890625,4.46875 C 2.3865232,8.0353518 0.7421875,12.005675 0.7421875,16 c 0,3.994325 1.6443357,7.964648 4.46875,10.789062 2.8244143,2.824415 6.7947375,4.46875 10.7890625,4.46875 3.994325,0 7.964648,-1.644335 10.789062,-4.46875 2.824415,-2.824414 4.46875,-6.794737 4.46875,-10.789062 0,-3.994325 -1.644335,-7.9646482 -4.46875,-10.7890625 C 23.964648,2.3865232 19.994325,0.7421875 16,0.7421875 Z"
+       id="path921"
+       inkscape:connector-curvature="0"
+       transform="matrix(1.0486431,0,0,1.0486431,-0.77828982,-0.77828982)" />
+    <g
+       id="g4633"
+       transform="matrix(-1,0,0,1,27.140625,-2.0912163e-7)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path868"
+         d="M 8.4421944,8.1603418 A 0.5807796,0.5807796 0 0 1 8.7628537,8.2687495 L 18.92623,15.529397 a 0.5807796,0.5807796 0 0 1 0,0.943655 L 8.7628537,23.732172 A 0.5807796,0.5807796 0 0 1 7.8451569,23.260346 V 8.7405839 A 0.5807796,0.5807796 0 0 1 8.4421944,8.1603418 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.21475601px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    </g>
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:0.67391306"
+       width="10.364495"
+       height="10.960155"
+       x="6.1314607"
+       y="10.519922"
+       id="rect4892"
+       rx="1.3478261"
+       ry="1.3478261" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:none"
+       id="rect4958"
+       width="6.4523492"
+       height="2.563262"
+       x="10.668263"
+       y="19.502951"
+       rx="2"
+       ry="2"
+       transform="rotate(-35.28832)" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:none"
+       id="rect4958-5"
+       width="6.4523492"
+       height="2.563262"
+       x="28.697094"
+       y="-6.3440509"
+       rx="2"
+       ry="2"
+       transform="matrix(0.81625537,0.57769124,0.57769124,-0.81625537,0,0)"
+       inkscape:transform-center-x="0.78125141"
+       inkscape:transform-center-y="12.6875" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:0.99992394"
+       id="rect4958-3"
+       width="6.4518633"
+       height="2.5630651"
+       x="-27.622755"
+       y="-16.996218"
+       rx="1.9998493"
+       ry="1.9998463"
+       transform="rotate(-179.32738)" />
+  </g>
+</svg>

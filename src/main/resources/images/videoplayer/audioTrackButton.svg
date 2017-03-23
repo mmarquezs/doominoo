@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+        width="32px"
+        height="32px"
+        viewBox="0 0 32 32"
+        version="1.1"
+        id="SVGRoot"
+        inkscape:version="0.92.1 r"
+        sodipodi:docname="audioTrackButton.svg"
+        enable-background="new">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="22.627417"
+     inkscape:cx="15.393372"
+     inkscape:cy="15.526958"
+     inkscape:document-units="px"
+     inkscape:current-layer="g5410"
+     showgrid="false"
+     inkscape:window-width="940"
+     inkscape:window-height="1037"
+     inkscape:window-x="967"
+     inkscape:window-y="30"
+     inkscape:window-maximized="0"
+     inkscape:grid-bbox="true"
+     showguides="true"
+     inkscape:measure-start="21,15"
+     inkscape:measure-end="29,15"
+     inkscape:pagecheckerboard="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid866"
+       spacingx="0.5"
+       spacingy="0.5" />
+  </sodipodi:namedview>
+  <defs
+     id="defs18" />
+  <metadata
+     id="metadata21">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Capa 1">
+    <g
+       id="g5410"
+       transform="translate(0.6646213,1.9904704)">
+      <path
+         style="fill:#e6e6e6;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+         d="M 15.898438,8.4414062 C 12.899473,8.5319416 10.059011,11.09936 9.1230469,15.578125 a 2.4748738,4.1100583 0 0 0 -1.6523438,3.873047 2.4748738,4.1100583 0 0 0 2.4746094,4.109375 2.4748738,4.1100583 0 0 0 2.4746095,-4.109375 2.4748738,4.1100583 0 0 0 -2.226563,-4.089844 C 11.13418,11.483801 13.5628,9.512801 15.927734,9.4414062 18.281159,9.3703586 20.750926,11.151111 21.845703,15.3125 a 2.4748738,4.1100583 0 0 0 -2.265625,4.09375 2.4748738,4.1100583 0 0 0 2.47461,4.109375 2.4748738,4.1100583 0 0 0 2.474609,-4.109375 2.4748738,4.1100583 0 0 0 -1.59375,-3.835938 C 21.828854,10.757651 18.889338,8.3511143 15.898438,8.4414062 Z"
+         transform="translate(-0.66462135,-1.9902223)"
+         inkscape:connector-curvature="0"
+         id="path5596" />
+    </g>
+  </g>
+</svg>
