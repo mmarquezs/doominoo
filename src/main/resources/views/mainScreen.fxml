@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.doominoo.screens.controls.MoviePostersListView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.*?>
-<StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../css/mainScreen.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../css/mainScreen.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <GridPane id="gridpane" fx:id="gridPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="1024.0">
          <columnConstraints>
@@ -34,7 +35,7 @@
                   <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
-            <ListView id="moviesPostersList" fx:id="moviesPostersList" orientation="HORIZONTAL" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="7" GridPane.rowSpan="3" />
+            <MoviePostersListView id="moviesPostersList" fx:id="moviesPostersList" orientation="HORIZONTAL" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="7" GridPane.rowSpan="3" />
             <HBox fx:id="bottomButtonsHBox" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="10" GridPane.rowSpan="3" />
             <ListView id="movieDetailsList" fx:id="movieDetailsListView" focusTraversable="false" orientation="HORIZONTAL" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: -fx-background; -fx-background-insets: 0;" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" GridPane.rowSpan="6">
                <opaqueInsets>
@@ -43,9 +44,9 @@
             </ListView>
          </children>
       </GridPane>
-      <HBox id="border-shadow" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+      <HBox id="border-shadow" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mouseTransparent="true">
          <children>
-            <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Pane focusTraversable="true" mouseTransparent="true" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
          </children></HBox>
    </children>
 </StackPane>

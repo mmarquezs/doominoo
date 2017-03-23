@@ -5,6 +5,7 @@ import com.doominoo.Movie;
 import com.doominoo.ScreensManager;
 import com.doominoo.VideoPlayer;
 import com.doominoo.screens.controls.MediaDetails;
+import com.doominoo.screens.controls.MoviePostersListView;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -16,8 +17,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -58,7 +57,7 @@ public class MainScreen extends StackPane implements AppScreen {
     private ListView<Movie> movieDetailsListView;
 //    private ListView<String> movieDetailsListView;
     @FXML
-    private ListView<Movie> moviesPostersList;
+    private MoviePostersListView moviesPostersList;
 
     @FXML
     private HBox bottomButtonsHBox;
@@ -137,57 +136,16 @@ public class MainScreen extends StackPane implements AppScreen {
         });
 
         moviesPostersList.setItems(moviesObservableList);
-        moviesPostersList.setCellFactory(new Callback<ListView<Movie>, ListCell<Movie>>() {
-            @Override
-            public ListCell<Movie> call(ListView<Movie> movieListView) {
-                ListCell lc = new ListCell<Movie>() {
-                    @Override
-                    protected void updateItem(Movie movie, boolean bln) {
-                        super.updateItem(movie, bln);
-                        if (movie != null && movie.getPosterImageUrl() != null) {
-                            ImageView imageView = new ImageView(movie.getPosterImageUrl());
-                            imageView.setPreserveRatio(true);
-                            imageView.fitHeightProperty().bind(this.heightProperty());
-//                            imageView.setFitHeight(getPrefHeight());
-//                            imageView.setFitWidth(getPrefWidth());
-                            setGraphic(imageView);
-                        } else if (movie != null && movie.getTitle() != null) {
-                            setText(movie.getTitle());
-                        }
-                    }
-                };
-//                lc.prefWidthProperty().bind(movieListView.widthProperty());
-                lc.prefHeightProperty().bind(movieListView.heightProperty());
-//                lc.maxWidthProperty().bind(movieListView.widthProperty());
-                lc.maxHeightProperty().bind(movieListView.heightProperty());
-//                movieListView.setOnKeyReleased(keyEvent -> {
-//                    if (keyEvent.getCode() == KeyCode.ENTER) {
-//                        Log.info("Received ENTER");
-//                        String path = ((CouchpotatoMovie) lc.getItem()).getFilePath();
-//                        if (path != null) {
-//                            manager.setActiveScreenTo("MainScreen");
-//                            VideoPlayer videoPlayer = ((VideoPlayerScreen) manager
-//                                    .getScreen("VideoPlayerScreen"))
-//                                    .getVideoPlayer();
-//                            videoPlayer.play();
-//                        }
-//                    }
-//                });
-                return lc;
+        moviesPostersList.setOnAction((Callback<Movie, Void>) movie -> {
+            String path = movie.getFilePath();
+            if (path != null) {
+                manager.setActiveScreenTo("VideoPlayerScreen");
+                videoPlayerScreen.setBackScreen("MainScreen");
+                VideoPlayer videoPlayer = videoPlayerScreen
+                        .getVideoPlayer();
+                videoPlayer.play(path);
             }
-        });
-
-        moviesPostersList.setOnKeyReleased(keyEvent -> {
-            if (keyEvent.getCode() == KeyCode.ENTER) {
-                String path = moviesPostersList.getSelectionModel().getSelectedItems().get(0).getFilePath();
-                if (path != null) {
-                    manager.setActiveScreenTo("VideoPlayerScreen");
-                    videoPlayerScreen.setBackScreen("MainScreen");
-                    VideoPlayer videoPlayer = videoPlayerScreen
-                            .getVideoPlayer();
-                    videoPlayer.play(path);
-                }
-            }
+            return null;
         });
         moviesPostersList.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
@@ -197,11 +155,8 @@ public class MainScreen extends StackPane implements AppScreen {
                 movieDetailsListView.scrollTo(t1.intValue());
             }
         });
+
     }
-
-
-
-
     void updateUi() {
         Platform.runLater(new Runnable() {
                               @Override
