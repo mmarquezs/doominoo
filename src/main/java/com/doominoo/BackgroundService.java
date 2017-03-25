@@ -13,6 +13,7 @@ import com.uwetrottmann.tmdb2.services.FindService;
 import com.uwetrottmann.tmdb2.services.MoviesService;
 import javafx.concurrent.ScheduledService;
 import javafx.concurrent.Task;
+import javafx.scene.image.ImageView;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import retrofit2.Call;
@@ -143,7 +144,7 @@ public class BackgroundService extends ScheduledService<Boolean>{
                     movie.setTitle(movieInfo.get().title);
                     movie.setPlot(movieInfo.get().overview);
                     movie.setBackdropImageUrl("http://image.tmdb.org/t/p/w780" + movieInfo.get().backdrop_path);
-                    movie.setPosterImageUrl("http://image.tmdb.org/t/p/w342" + movieInfo.get().poster_path);
+                    movie.setPosterImage(new ImageView("http://image.tmdb.org/t/p/w342" + movieInfo.get().poster_path));
                 } else {
                     movie.setTitle(couchMovie.getTitle());
                     movie.setPlot(couchMovie.getInfo().getPlot());

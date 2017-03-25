@@ -136,7 +136,7 @@ public class MainScreen extends StackPane implements AppScreen {
         });
 
         moviesPostersList.setItems(moviesObservableList);
-        moviesPostersList.setOnAction((Callback<Movie, Void>) movie -> {
+        moviesPostersList.setOnAction(movie -> {
             String path = movie.getFilePath();
             if (path != null) {
                 manager.setActiveScreenTo("VideoPlayerScreen");
@@ -158,17 +158,14 @@ public class MainScreen extends StackPane implements AppScreen {
 
     }
     void updateUi() {
-        Platform.runLater(new Runnable() {
-                              @Override
-                              public void run() {
-                                  int position = moviesPostersList.getFocusModel().getFocusedIndex();
-                                  moviesObservableList.clear();
-                                  moviesObservableList.addAll(service.getMovies());
-                                  moviesPostersList.refresh();
-                                  movieDetailsListView.refresh();
-                                  restoreSelection(position);
-                              }
-                          });
+        Platform.runLater(() -> {
+            int position = moviesPostersList.getFocusModel().getFocusedIndex();
+            moviesObservableList.clear();
+            moviesObservableList.addAll(service.getMovies());
+            moviesPostersList.refresh();
+            movieDetailsListView.refresh();
+            restoreSelection(position);
+        });
     }
 
     private void restoreSelection(int position) {

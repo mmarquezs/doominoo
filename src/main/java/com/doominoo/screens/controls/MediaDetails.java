@@ -93,10 +93,7 @@ public class MediaDetails {
         setPlot(movie.getPlot());
         setImage(movie.getBackdropImageUrl());
         setStatus(movie.getStatus());
-
-
     }
-
 
     public String getTitle() {
         return title.getText();

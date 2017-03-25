@@ -1,5 +1,7 @@
 package com.doominoo;
 
+import javafx.scene.image.ImageView;
+
 /**
  * Created by marcmarquez on 09/03/17.
  */
@@ -12,7 +14,7 @@ public class Movie {
     private String plot;
     private String filePath;
     private String backdropImageUrl;
-    private String posterImageUrl;
+    private ImageView posterImage;
     private String status;
     private Long tmdbId;
 
@@ -64,12 +66,12 @@ public class Movie {
         this.backdropImageUrl = backdropImageUrl;
     }
 
-    public String getPosterImageUrl() {
-        return posterImageUrl;
+    public ImageView getPosterImage() {
+        return posterImage;
     }
 
-    public void setPosterImageUrl(String posterImageUrl){
-        this.posterImageUrl = posterImageUrl;
+    public void setPosterImage(ImageView posterImage){
+        this.posterImage = posterImage;
     }
 
     public String getContentRating() {
@@ -114,7 +116,7 @@ public class Movie {
         if (filePath != null ? !filePath.equals(movie.filePath) : movie.filePath != null) return false;
         if (backdropImageUrl != null ? !backdropImageUrl.equals(movie.backdropImageUrl) : movie.backdropImageUrl != null)
             return false;
-        return posterImageUrl != null ? posterImageUrl.equals(movie.posterImageUrl) : movie.posterImageUrl == null;
+        return posterImage != null ? posterImage.equals(movie.posterImage) : movie.posterImage == null;
     }
 
     @Override
@@ -127,7 +129,7 @@ public class Movie {
         result = 31 * result + (plot != null ? plot.hashCode() : 0);
         result = 31 * result + (filePath != null ? filePath.hashCode() : 0);
         result = 31 * result + (backdropImageUrl != null ? backdropImageUrl.hashCode() : 0);
-        result = 31 * result + (posterImageUrl != null ? posterImageUrl.hashCode() : 0);
+        result = 31 * result + (posterImage != null ? posterImage.hashCode() : 0);
         return result;
     }
 
