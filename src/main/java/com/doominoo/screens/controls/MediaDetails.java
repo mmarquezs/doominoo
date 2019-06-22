@@ -30,6 +30,8 @@ public class MediaDetails {
     private VBox vBoxImageView1;
 
     @FXML
+    private ImageViewPane imageViewPane;
+
     private ImageView imageView;
 
     @FXML
@@ -70,7 +72,10 @@ public class MediaDetails {
     	title.textProperty().addListener((observable, oldValue, newValue) -> {
     		//title.setText(newValue.toUpperCase());
     	});
-    	imageView.fitHeightProperty().bind(vbox.heightProperty());
+    	imageView = new ImageView();
+//    	imageViewPane = new ImageViewPane();
+        imageViewPane.setImageView(imageView);
+//    	imageView.fitHeightProperty().bind(vbox.heightProperty());
 
     }
 
@@ -120,9 +125,9 @@ public class MediaDetails {
     }
 
     public void setImage(String imagePath) {
-	Image image = new Image(imagePath,true);
-        imageView.setImage(image);
-	imageView.setCache(true);
+        Image image = new Image(imagePath,true);
+        imageViewPane.getImageView().setImage(image);
+        imageViewPane.getImageView().setCache(true);
     }
 
     public void setStatus(String status) {

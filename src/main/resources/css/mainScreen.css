@@ -14,11 +14,19 @@
    -fx-background-color: black;
 }
 
-#moviesPostersList,
-#moviesDetailsList,
-#moviesPostersList .cell
-{
-    -fx-background-color: transparent;
+/*#moviesPostersList,*/
+/*#moviesDetailsList,*/
+/*#moviesPostersList .cell*/
+/*{*/
+    /*-fx-background-color: transparent;*/
+/*}*/
+
+#moviesPostersList .label {
+    -fx-text-alignment: center;
+    -fx-font-family: "Arial";
+    -fx-font-size: 15px;
+    -fx-font-weight: bolder;
+    -fx-text-fill: white;
 }
 #gridpane {
     -fx-border-color: black;

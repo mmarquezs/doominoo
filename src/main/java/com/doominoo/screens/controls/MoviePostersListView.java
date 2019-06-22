@@ -1,6 +1,7 @@
 package com.doominoo.screens.controls;
 
 import com.doominoo.Movie;
+import com.sun.javafx.scene.control.skin.ListViewSkin;
 import javafx.animation.ScaleTransition;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -13,6 +14,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 import javafx.util.Duration;
@@ -52,18 +54,18 @@ public class MoviePostersListView extends ListView<Movie> {
 //                        imageContainer.getChildren().addAll(poster);
 //                        imageContainer.prefHeightProperty().bind(movieListView.heightProperty().subtract(title.prefHeightProperty()));
 //                        imageContainer.maxHeightProperty().bind(movieListView.heightProperty().subtract(title.prefHeightProperty()));
-                        poster.fitHeightProperty().bind(prefHeightProperty().subtract(title.prefHeightProperty()));
 
 //                        vBox.setBorder(new Border(new BorderStroke(Color.YELLOW,
 //                                BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
 //                        vBox.setBackground(new Background(new BackgroundFill(Color.RED,CornerRadii.EMPTY, Insets.EMPTY)));
                         vBox.setFillWidth(false);
-                        prefHeightProperty().bind(movieListView.heightProperty());
-                        maxHeightProperty().bind(movieListView.heightProperty());
-//                        vBox.prefHeightProperty().bind(movieListView.heightProperty().subtract(vBox.getBorder().getInsets().getTop()+vBox.getBorder().getInsets().getBottom()));
-//                        vBox.maxHeightProperty().bind(movieListView.heightProperty().subtract(vBox.getBorder().getInsets().getTop()+vBox.getBorder().getInsets().getBottom()));
-                        vBox.prefHeightProperty().bind(heightProperty());
-                        vBox.maxHeightProperty().bind(heightProperty());
+//                        prefHeightProperty().bind(movieListView.heightProperty());
+//                        maxHeightProperty().bind(movieListView.heightProperty());
+//                        poster.fitHeightProperty().bind(maxHeightProperty().subtract(title.maxHeightProperty()));
+////                        vBox.prefHeightProperty().bind(movieListView.heightProperty().subtract(vBox.getBorder().getInsets().getTop()+vBox.getBorder().getInsets().getBottom()));
+////                        vBox.maxHeightProperty().bind(movieListView.heightProperty().subtract(vBox.getBorder().getInsets().getTop()+vBox.getBorder().getInsets().getBottom()));
+//                        vBox.prefHeightProperty().bind(heightProperty());
+//                        vBox.maxHeightProperty().bind(heightProperty());
 //                        poster.fitHeightProperty().bind(vBox.maxHeightProperty().subtract(title.getBoundsInLocal().getMaxX()));
 //                        poster.fitHeightProperty().bind(vBox.maxHeightProperty().subtract(vBox.getBorder().getInsets().getTop()+vBox.getBorder().getInsets().getBottom()));
 //                        title.maxHeightProperty().addListener(new ChangeListener<Number>() {
@@ -78,34 +80,34 @@ public class MoviePostersListView extends ListView<Movie> {
 //                                poster.setFitHeight(vBox.getMaxHeight()-t1.doubleValue());
 //                            }
 //                        });
-                        poster.imageProperty().addListener(new ChangeListener<Image>() {
-                            @Override
-                            public void changed(ObservableValue<? extends Image> observableValue, Image image, Image t1) {
-                                title.setMaxWidth(poster.getBoundsInParent().getWidth());
-                                title.setPrefWidth(poster.getBoundsInParent().getWidth());
-                            }
-                        });
+//                        poster.imageProperty().addListener(new ChangeListener<Image>() {
+//                            @Override
+//                            public void changed(ObservableValue<? extends Image> observableValue, Image image, Image t1) {
+//                                title.setMaxWidth(poster.getBoundsInParent().getWidth());
+//                                title.setPrefWidth(poster.getBoundsInParent().getWidth());
+//                            }
+//                        });
 //                        poster.fitHeightProperty().bind(vBox.maxHeightProperty().subtract(title.maxHeightProperty()));
                         setGraphic(vBox);
 //                        poster.fitHeightProperty().bind(vBox.heightProperty());
 //                        vBox.prefHeightProperty().bind(heightProperty());
 //                        vBox.maxHeightProperty().bind(heightProperty());
-                        setScaleX(0.85);
-                        setScaleY(0.85);
-                        selectedProperty().addListener((observableValue, aBoolean, t1) -> {
-                            if (t1) {
-                                zoomInPoster(this, Duration.millis(250));
-                            }else{
-                                zoomOutPoster(this, Duration.millis(250));
-                            }
-                        });
-                        hoverProperty().addListener((observableValue, aBoolean, t1) -> {
-                            if (t1) {
-                                zoomInPoster(this, Duration.millis(250));
-                            }else{
-                                zoomOutPoster(this, Duration.millis(250));
-                            }
-                        });
+//                        setScaleX(0.85);
+//                        setScaleY(0.85);
+//                        selectedProperty().addListener((observableValue, aBoolean, t1) -> {
+//                            if (t1) {
+//                                zoomInPoster(this, Duration.millis(250));
+//                            }else{
+//                                zoomOutPoster(this, Duration.millis(250));
+//                            }
+//                        });
+//                        hoverProperty().addListener((observableValue, aBoolean, t1) -> {
+//                            if (t1) {
+//                                zoomInPoster(this, Duration.millis(250));
+//                            }else{
+//                                zoomOutPoster(this, Duration.millis(250));
+//                            }
+//                        });
                     }
 
                     @Override
